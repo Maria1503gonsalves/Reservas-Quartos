@@ -27,7 +27,7 @@ public class PagamentoController {
 
     @PostMapping("/processar")
     public Map<String, Object> processarPagamento(@RequestParam double valor, @RequestParam String tokenCartao) {
-        Stripe.apiKey = stripeApiKey;
+        stripeApiKey= stripeApiKey;
         Map<String, Object> resposta = new HashMap<>();
 
         try {
